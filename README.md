@@ -13,9 +13,10 @@ This model is then compared to an Azure AutoML run.
 
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+This dataset contains data from the UCI repository "Bank Marketing Data Set" (https://archive.ics.uci.edu/ml/datasets/bank+marketing) which contains data from a Portugeuse banking institution and predicts on whether a client will subscribe a term deposit to their bank using 20 attributes such as age, employment variation rate, and days of the week the client was contacted. 
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+The best performing model 
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
