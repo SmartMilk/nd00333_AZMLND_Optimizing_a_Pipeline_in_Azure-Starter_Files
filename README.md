@@ -36,7 +36,7 @@ AutoML configuration is relatively simple in comparison to the Scikit Pipeline /
 
 ## Pipeline comparison
 
-The best performing model was found to be a XGBoost classifier with a 91.8% successful prediction rate, identified via Azure's AutoML SDK implementation. However, it only marginally outperformed the logistic regression classifier at 91.2% prediction rate which was simply finetuned via Hyperdrive. 
+The best performing model was found to be a XGBoost classifier with a 91.8% successful prediction rate, identified via Azure's AutoML SDK implementation. However, it only marginally outperformed the logistic regression classifier at 91.3% prediction rate which was simply finetuned via Hyperdrive. 
 
 _Fig 1: Performance of Hyperdrive model measured as accuracy over model iteration. The model's highest accuracy is highlighted._ 
 ![Proj1_Hyperdrive_performance](https://user-images.githubusercontent.com/24628312/207839162-04f0197e-c752-4306-a5fb-1c0745301c84.jpg)
