@@ -34,6 +34,8 @@ For both parameters, discrete ranges of values were chosen based on past experie
 ## AutoML
 AutoML configuration is relatively simple in comparison to the Scikit Pipeline / Hyperdrive method. Aside from the target dataset (the cleaned dataset) and the target label, the only other parameter to consider are the number of cross validations performed per AutoML iteration. This was chosen as 10 as this is the standard method of cross-validation seen in most ML research papers. 
 
+AutoML considers dozens of different models such that it is impractical to describe all models. In this particular run, an XGBoost model was chosen as the best classifier and so is worth covering in more detail; within the confines of an XGBoost model, AutoML will tune various hyperparameters such as the number of estimators (_n_estimators_), the maximum amount of features used (_n_features_) and maximum no. of leaf nodes (_max_leaf_nodes_). 
+
 ## Pipeline comparison
 
 The best performing model was found to be a XGBoost classifier with a 91.8% successful prediction rate, identified via Azure's AutoML SDK implementation. However, it only marginally outperformed the logistic regression classifier at 91.3% prediction rate which was simply finetuned via Hyperdrive. 
