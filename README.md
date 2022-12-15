@@ -38,7 +38,8 @@ AutoML configuration is relatively simple in comparison to the Scikit Pipeline /
 
 The best performing model was found to be a XGBoost classifier with a 91.8% successful prediction rate, identified via Azure's AutoML SDK implementation. However, it only marginally outperformed the logistic regression classifier at 91.2% prediction rate which was simply finetuned via Hyperdrive. 
 
-(Insert Performance Graphs here)
+![Proj1_Hyperdrive_performance](https://user-images.githubusercontent.com/24628312/207839162-04f0197e-c752-4306-a5fb-1c0745301c84.jpg)
+![Proj1_AutoML_performance](https://user-images.githubusercontent.com/24628312/207839214-c702efdd-685f-4ab0-9ae8-974a7f098920.jpg)
 
 Logistic Regression and XGBoost are naturally very different classifiers and so their performance on a particular ML problem will be entirely context-dependent. However, XGBoost models are more architecturally complex and typically tend to perform quite well as classifiers in comparison to the more simplisitic logisitc regression model (based on past research and experience). In this particular instance, XGBoost appears to have found a good combination of weak learning configurations to give it the edge over the logistic regression model. 
 
@@ -50,4 +51,6 @@ In terms of improving the AutoML configuration, limiting the types of classifier
 Another possible solution would be to combine the learning of the AutoML run (where XGBoost was found to be the best classifier) and then perform hyperdrive tuning on XGBoost models to determine whether a more optimal configuration of XGBoost exists, ignorning all other classifiers to reduce computational cost. 
 
 ## Proof of cluster clean up
+
+![Proj1_Cluster_cleanup_proof](https://user-images.githubusercontent.com/24628312/207839253-1b8f46f0-a24b-4f4f-a7cd-7a837a7343f7.jpg)
 
