@@ -35,7 +35,6 @@ For both parameters, discrete ranges of values were chosen based on past experie
 AutoML configuration is relatively simple in comparison to the Scikit Pipeline / Hyperdrive method. Aside from the target dataset (the cleaned dataset) and the target label, the only other parameter to consider are the number of cross validations performed per AutoML iteration. This was chosen as 10 as this is the standard method of cross-validation seen in most ML research papers. 
 
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
 
 The best performing model was found to be a XGBoost classifier with a 91.8% successful prediction rate, identified via Azure's AutoML SDK implementation. However, it only marginally outperformed the logistic regression classifier at 91.2% prediction rate which was simply finetuned via Hyperdrive. 
 
@@ -51,5 +50,4 @@ In terms of improving the AutoML configuration, limiting the types of classifier
 Another possible solution would be to combine the learning of the AutoML run (where XGBoost was found to be the best classifier) and then perform hyperdrive tuning on XGBoost models to determine whether a more optimal configuration of XGBoost exists, ignorning all other classifiers to reduce computational cost. 
 
 ## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
+
