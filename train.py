@@ -10,9 +10,6 @@ import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
 
-#Added extra library as TabularDatasetFactory doesn't seem to work with current config
-from azureml.core import Dataset
-
 def clean_data(data):
     # Dict for cleaning data
     months = {"jan":1, "feb":2, "mar":3, "apr":4, "may":5, "jun":6, "jul":7, "aug":8, "sep":9, "oct":10, "nov":11, "dec":12}
@@ -60,8 +57,7 @@ def main():
     run.log("Accuracy", np.float(accuracy))
 
 if __name__ == '__main__':
-   # web_url ='https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv'
-  #  ds = Dataset.Tabular.from_delimited_files(path=web_url)
+    #Had to relocate my user code here otherwise Job would not start
 
     ds = TabularDatasetFactory.from_delimited_files(['https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv'])
     
